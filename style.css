@@ -1,0 +1,216 @@
+/* !Import */
+@font-face {
+    font-family:'YoungR';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family:'outM' ;
+    src: url(./assets/fonts/outfit/static/Outfit-Medium.ttf);
+}
+@font-face {
+    font-family:'outE' ;
+    src: url(./assets/fonts/outfit/static/Outfit-ExtraBold.ttf);
+}
+@font-face {
+    font-family:'outL' ;
+    src: url(./assets/fonts/outfit/static/Outfit-Light.ttf);
+}
+/* !ٌReset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !Global Content */
+:root{
+--White:hsl(0, 0%, 100%);
+--Stone100: hsl(30, 54%, 90%);
+--Stone150: hsl(30, 18%, 87%);
+--Stone600: hsl(30, 10%, 34%);
+--Stone900: hsl(24, 5%, 18%);
+--Brown800: hsl(14, 45%, 36%);
+--Rose800: hsl(332, 51%, 32%);
+--Rose80: hsl(330, 100%, 98%);
+}
+body{
+    font-size: 16px;
+    background-color: var(--Stone100);
+}
+img{
+    max-width: 100%;
+}
+h2{
+    color: var(--Brown800);
+    font-family:'YoungR';
+    margin-bottom: 0.5em;
+}
+
+/* !Body Content */
+/* ?===============Start Main===============*/
+main{
+    background-color: var(--White);
+    width: 40%;
+    padding: 2em;
+    margin: 4em auto;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*===============Header Description===============*/
+header img{
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+header h1{
+    font-family:'YoungR';
+    margin-bottom: 0.5em;
+}
+header p{
+    font-family:'outL' ;
+}
+
+/*===============Preparation Time Section===============*/
+section#prepTime{
+    background-color: var(--Rose80);
+    margin: 2em 1em;
+    padding:1em 0;
+}
+section#prepTime p{
+    color: var(--Rose800);
+    font-family:'outE' ;
+    font-size: 20px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+}
+section#prepTime ul {
+    padding:0 3em;
+}
+section#prepTime ul li{
+    font-family:'outM' ;
+    margin-bottom: 1em;
+}
+
+/*===============Ingredients Section===============*/
+section#ingredients ul{
+    padding-left: 1.5em;
+}
+section#ingredients ul li{
+    padding:0.3em 1em;
+}
+section#ingredients ul li::marker{
+    color: var(--Brown800);
+    font-family:'outE' ;
+}
+section#ingredients::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Brown800);
+    margin: 1.5em 0;
+}
+
+
+/*===============Instrructions Section===============*/
+section#instructions ol{
+    padding-left: 1.5em;
+}
+section#instructions ol li{
+    padding:0.3em 1em;
+}
+section#instructions ol li::marker{
+    color: var(--Brown800);
+    font-family:'outE' ;
+}
+
+/*===============Nutrition Section===============*/
+section#nutrition::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Brown800);
+    margin: 1.5em 0;
+}
+section#nutrition P{
+    font-family:'outL' ;
+
+}
+/* Table Of Nutrition  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18); /* Adds a line under each row */
+}
+
+td {
+    padding: 8px; /* Adds some padding for readability */
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr td:last-child {
+    font-family:'outE' ;
+    color: var(--Brown800);
+}
+tr td:first-child {
+    font-family:'outL' ;
+
+}  
+/* !Media Query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    main{
+        width: 100%;
+        margin: 0em auto;
+    }
+    header h1{
+        font-family:'YoungR';
+        font-size: 25px;
+        margin-bottom: 0.5em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    main{
+        width: 100%;
+        margin: 0em auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    main{
+        width: 100%;
+        margin: 0em auto;
+        padding: 0.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main{
+        width: 100%;
+        margin: 0em auto;
+        padding: 0.5em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    main{
+        width: 40%;
+        padding: 2em;
+        margin: 4em auto;
+    }
+}
